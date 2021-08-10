@@ -1,0 +1,27 @@
+img{
+    max-width: 100%;
+}
+.gallery{
+    background-color: burlywood;
+    padding: 80px 0;
+}
+.gallery img{
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 150x rgb(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.navbar {
+    border-bottom: black;
+}
+
+.card-body {
+    text-align: center;
+    font-size: 20px;
+}
+.card-body p {
+    text-align: center;
+
+}
