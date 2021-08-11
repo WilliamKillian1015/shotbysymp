@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Portraits</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_6223_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_5992_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_6079_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_6356_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_6546_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Portriat Photography/IMG_6096_edited-1-min.jpg" alt="">
+        </div>
+
+        <h1>Fashion</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3321_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3368_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3382_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3409_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3447_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Fashion Photography/IMG_3423_edited-1-min.jpg" alt="">
+        </div>
+
+        <h1>Bridal-Engagement</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Bridal-Engagement Photography/IMG_9286_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Bridal-Engagement Photography/IMG_9290_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Bridal-Engagement Photography/IMG_9426_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Bridal-Engagement Photography/IMG_9466_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Bridal-Engagement Photography/IMG_9664_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img//Bridal-Engagement Photography/IMG_5078_edited-1-min.jpg" alt="">
+        </div>
+
+        <h1>Maternity</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Maternity/IMG_0173_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Maternity/IMG_0208_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Maternity/IMG_0166_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Maternity/IMG_9834 (1)-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Maternity/2195-min.JPG" alt="">
+            <img class="myImages" id="myImg" src="img/Maternity/2251-min.JPG" alt="">
+        </div>
+
+        <h1>Family</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_2577_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_2579_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_2652_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_7585_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_7573_edited-1-min.jpg" alt="">
+            <img class="myImages" id="myImg" src="img/Family Photography/IMG_7703_edited-1-min.jpg" alt="">
+        </div>
+
+        <h1>Newborn</h1>
+        <div class="img-area">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9284-min.png" alt="">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9515-min.png" alt="">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9288-min.png" alt="">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9457-min.png" alt="">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9501-min.png" alt="">
+            <img class="myImages" id="myImg" src="img/Newborn/IMG_9495-min.png" alt="">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+</body>
+
+<script>
+    // Create reference to the modal
+    var modal = document.getElementById("myModal");
+
+    // To all images
+    var images = document.getElementsByClassName("myImages");
+    // The image in the modal
+    var modalImg = document.getElementById("img01");
+    // The caption in the modal
+    var captionText = document.getElementById("caption");
+
+    for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        img.onclick = function(evt) {
+            console.log(evt);
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt
+        }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0]
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+</html>
